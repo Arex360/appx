@@ -16,7 +16,7 @@ const http = require('http').createServer(app)
 // Routes
 app.use('/api', require('./routes/authRouter'))
 
-const URI = process.env.MONGO_DB_URL
+const URI = 'mongodb+srv://admin:admin@cluster0.sb1a4.mongodb.net/video?retryWrites=true&w=majority'
 
 const connectDB = async () => {
 	await mongoose.connect(

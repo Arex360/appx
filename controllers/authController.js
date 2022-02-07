@@ -87,7 +87,7 @@ const authController = {
 			const rf_token = req.cookies.refreshToken
 			if (!rf_token) return res.status(400).json({ msg: 'Please login now.' })
 
-			jwt.verify(rf_token, process.env.REFRESH_TOKEN_SECRET, async (error, result) => {
+			jwt.verify(rf_token, 'myrefreshtokensceret0012', async (error, result) => {
 				if (error) return res.status(400).json({ msg: 'Please login now.' })
 
 				const user = await Users.findById(result.id).select('-password')
@@ -105,11 +105,11 @@ const authController = {
 }
 
 const createAccessToken = (paylaod) => {
-	return jwt.sign(paylaod, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '7d' })
+	return jwt.sign(paylaod, 'myaccesstokensceret001', { expiresIn: '7d' })
 }
 
 const createRefreshToken = (paylaod) => {
-	return jwt.sign(paylaod, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '30d' })
+	return jwt.sign(paylaod, 'myrefreshtokensceret0012', { expiresIn: '30d' })
 }
 
 module.exports = authController
