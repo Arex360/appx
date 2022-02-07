@@ -16,7 +16,7 @@ const http = require('http').createServer(app)
 // Routes
 app.use('/api', require('./routes/authRouter'))
 
-const URI = 'mongodb+srv://admin:admin@cluster0.sb1a4.mongodb.net/video?retryWrites=true&w=majority'
+const URI = process.env.MONGO_DB_URL
 
 const connectDB = async () => {
 	await mongoose.connect(
@@ -36,7 +36,7 @@ connectDB()
 
 const port = process.env.PORT || 5000
 
-if (true) {
+if (process.env.NODE_ENV === 'production') {
 	app.use(express.static(path.join(__dirname, '/client/build')))
 
 	app.get('*', (req, res) => {
