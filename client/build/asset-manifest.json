@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.107cc87b.css",
+    "main.css": "/static/css/main.6390229f.css",
     "main.js": "/static/js/main.420b2b4c.js",
     "static/media/anna-actor.png": "/static/media/anna-actor.d21f51032bf664375d62.png",
     "static/media/books-background.png": "/static/media/books-background.d8857f468f360e8dc723.png",
@@ -22,11 +22,11 @@
     "static/media/ProfileEdit.png": "/static/media/ProfileEdit.efb482850ad74456fb49.png",
     "static/media/american-voice-sample-1.mp3": "/static/media/american-voice-sample-1.c5ca9fa09e87b4ae736e.mp3",
     "index.html": "/index.html",
-    "main.107cc87b.css.map": "/static/css/main.107cc87b.css.map",
+    "main.6390229f.css.map": "/static/css/main.6390229f.css.map",
     "main.420b2b4c.js.map": "/static/js/main.420b2b4c.js.map"
   },
   "entrypoints": [
-    "static/css/main.107cc87b.css",
+    "static/css/main.6390229f.css",
     "static/js/main.420b2b4c.js"
   ]
 }
